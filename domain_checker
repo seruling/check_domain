@@ -1,0 +1,8 @@
+# #!/bin/bash
+for i in $(cat domains2.txt) 
+do
+	echo "http://$i"
+    curl -k -m 2 --head "http://$i"
+	echo "https://$i"
+    curl -k -m 2 --head "https://$i"
+done
